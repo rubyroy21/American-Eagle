@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.firstbar {
+  border: 1px solid red;
+  height: 40px;
+  width: 100%;
+}
+#companyName {
+  font-weight: bold;
+}
+
+body {
+  /* background-color: yellow; */
+}
+.menubar {
+  height: 120px;
+  border: 1px solid red;
+  /* background-color: pink; */
+  text-align: left;
+}
+.menubar ul {
+  display: inline-flex;
+  list-style: none;
+  margin-left: 70px;
+  margin-top: 70px;
+}
+.menubar ul li {
+  margin: 15px;
+}
+.menubar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#companyName:hover {
+  background-color: none;
+}
+/* .active .submenu-1:hover {
+    color: white;
+  } */
+
+.active:hover {
+  background-color: black;
+  color: white;
+}
+
+.submenu-1 {
+  display: none;
+  border: 1px solid red;
+
+  min-width: 80%;
+  max-height: 45%;
+  margin: auto;
+  line-height: 15px;
+  background-color: aqua;
+}
+.menubar ul li:hover .submenu-1 {
+  display: block;
+  position: absolute;
+  left: 100px;
+}
+.active:hover .submenu-1 ul {
+  display: block;
+  border: 1px solid red;
+  margin: 10px;
+}
+/* .menubar ul li:hover .submenu-1 ul li {
+    background: transparent;
+    text-align: left;
+    color: black;
+  } */
+.submenu-1 > div {
+  display: inline-block;
+  vertical-align: top;
+}
