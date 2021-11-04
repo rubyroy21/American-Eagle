@@ -511,3 +511,16 @@ hr {
     background-position: center;
   }
 }
+/* go to top button */
+.gototop {
+  position: fixed;
+  width: 60px;
+  height: 40px;
+  background-color: white;
+  bottom: 0px;
+  right: 0px;
+  border: 1px solid rgb(226, 224, 224);
+  text-decoration: none;
+  text-align: center;
+  line-height: 40px;
+}
