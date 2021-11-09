@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .quick {
+        border: 1px solid black;
+        float: right;
+        width: 30%;
+        height: 900px;
+        display: relative;
+        text-align: center;
+        padding: 15px;
+      }
+      .border {
+        border: 3px solid black;
+        background-color: black;
+      }
+      .imgix {
+        width: 80%;
+      }
+      #sel {
+        width: 50%;
+        float: left;
+        padding: 15px;
+        color: gray;
+      }
+      .counterr {
+        display: flex;
+        float: right;
+        width: 20%;
+        border: 1px solid gray;
+      }
+      #a1 {
+        float: left;
+      }
+      #a2 {
+        margin-left: 18px;
+      }
+      .buttons {
+        width: 100%;
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: space-between;
+        height: 50px;
+        margin-top: 10%;
+      }
+      .buttons button {
+        width: 60%;
+      }
+      #favb {
+        width: 25%;
+      }
+      .href {
+        text-decoration-color: black;
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quick">
+      <h2>QUICK VIEW</h2>
+      <div class="border"></div>
+      <p>AE SUPER SOFT FLANNEL SHIRT</p>
+      <img
+        class="imgix"
+        src="https://aeo.imgix.net/img/app/product/6/638930-6352317.jpg?w=305&auto=format"
+        alt=""
+      />
+      <p style="color: gray">American Eagle</p>
+      <p>₹ 5,999</p>
+      <form action="">
+        <label style="float: left"
+          ><a
+            class="href"
+            href="https://i.pinimg.com/originals/1a/66/c4/1a66c4b5a4f8ea8fbfc3a6722b40ac75.jpg"
+            >Size Chart</a
+          ></label
+        >
+        <br />
+        <br />
+        <select name="select" id="sel">
+          <option value="size">Size</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </form>
+      <div class="counterr">
+        <button id="a1">-</button>
+        <h4 id="res" style="margin-left: 20px">0</h4>
+        <button id="a2">+</button>
+      </div>
+      <br />
+      <br />
+      <div class="buttons">
+        <button>Add To Bag</button>
+        <button id="favb">&#10084;</button>
+      </div>
+      <br />
+      <p style="text-align: left">
+        <a class="href" href="">View More Details</a>
+      </p>
+    </div>
+  </body>
+</html>
+<script>
+  var counter = localStorage.getItem("counterRes") || 0;
+  document.querySelector("#a2").addEventListener("click", incFunction);
+  document.querySelector("#a1").addEventListener("click", decFunction);
+  if (counter == null) {
+    alert("the counter is null");
+  }
+
+  function incFunction() {
+    console.log("here");
+    counter++;
+    localStorage.setItem("counterRes", counter);
+    document.getElementById("res").textContent = counter;
+  }
+  function decFunction() {
+    counter--;
+    localStorage.setItem("counterRes", counter);
+    document.getElementById("res").textContent = counter;
+  }
+  window.addEventListener("load", function () {
+    document.getElementById("res").textContent = counter;
+  });
+</script>
