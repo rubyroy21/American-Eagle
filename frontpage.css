@@ -125,14 +125,6 @@ u:hover {
   border: 1px solid #cccccc;
 }
 
-.navbar_sticky {
-  height: 115px;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-}
-
 /* .nav_links li {
   justify-content: space-between;
 } */
@@ -495,28 +487,18 @@ hr {
     background-position: center;
   }
 }
-/* go to top button */
-.gototop {
-  position: fixed;
-  width: 60px;
-  height: 40px;
-  background-color: white;
-  bottom: 0px;
-  right: 0px;
-  border: 1px solid rgb(226, 224, 224);
-  text-decoration: none;
-  text-align: center;
-  line-height: 40px;
-}
+
 /* nav modified css */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.navbar_sticky {
+  height: 115px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
 }
 
 .menubar {
-  height: 80px;
+  height: 60px;
   /* border: 1px solid red; */
   /* background-color: pink; */
   text-align: left;
@@ -579,4 +561,25 @@ hr {
 }
 h5 {
   font-weight: bolder;
+}
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+  height: 50px;
+  width: 60px;
+  text-align: center;
+  border-radius: 4px;
+}
+
+#myBtn i:hover {
+  background-color: #555;
 }
