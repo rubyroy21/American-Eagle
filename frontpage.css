@@ -61,10 +61,11 @@ body {
 
 .firstBar {
   height: 30px;
-  width: 100%;
+  width: 95%;
   display: flex;
   gap: 20px;
   font-size: 11px;
+
   justify-content: right;
   align-items: center;
 }
@@ -109,7 +110,10 @@ u:hover {
 .secondBox {
   width: 25%;
   height: 80px;
-  margin: auto;
+  /* margin: auto; */
+  float: right;
+  margin-right: 80px;
+  margin-top: 30px;
 }
 
 .secondBox > p {
@@ -523,4 +527,76 @@ hr {
   text-decoration: none;
   text-align: center;
   line-height: 40px;
+}
+/* nav modified css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menubar {
+  height: 80px;
+  /* border: 1px solid red; */
+  /* background-color: pink; */
+  text-align: left;
+}
+.menubar ul {
+  display: inline-flex;
+  list-style: none;
+  margin-left: 70px;
+  margin-top: 50px;
+}
+.menubar ul li {
+  margin: 15px;
+}
+.active .submenu-1:hover {
+  color: white;
+}
+.menubar ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+#companyName:hover {
+  background-color: none;
+  color: white;
+}
+
+.active .hover1:hover {
+  background-color: black;
+  color: white;
+}
+
+.submenu-1 {
+  display: none;
+  /* border: 1px solid red; */
+
+  min-width: 80%;
+  max-height: 45%;
+  margin: auto;
+  line-height: 15px;
+  background-color: white;
+}
+.menubar ul li:hover .submenu-1 {
+  display: block;
+  position: absolute;
+  left: 100px;
+}
+.active:hover .submenu-1 ul {
+  display: block;
+  /* border: 1px solid red; */
+  margin: 10px;
+}
+/* .menubar ul li:hover .submenu-1 ul li {
+  background: transparent;
+  text-align: left;
+  color: black;
+} */
+.submenu-1 > div {
+  display: inline-block;
+  vertical-align: top;
+}
+h5 {
+  font-weight: bolder;
 }
