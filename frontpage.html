@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      type="png"
+      sizes="612x612"
+      href="https://aeo.imgix.net/img/app/favicon/ae/browserconfig.xml"
+    />
     <title>American Eagle India - Buy Men & Womens Clothing, Shoes & ...</title>
     <link rel="stylesheet" href="frontpage.css" />
     <link
@@ -24,9 +30,24 @@
         <p>
           <a href="#"><u class="uline">Track Order</u></a>
         </p>
-        <p>
-          <a href="#"><u class="uline">My Aeo</u></a>
-        </p>
+        <div class="dropdown">
+          <a class="dropbtn" href="#"><u class="uline">My Aeo</u></a>
+
+          <div class="dropdown-content">
+            <a href="#"><button class="signinBtn">Sign in</button></a>
+            <a href="#"><u class="uline">AEO Credits</u></a>
+            <a href="#"><u class="uline">Online Orders History</u></a>
+            <a href="#"><u class="uline">Giftcard Order History</u></a>
+            <a href="#"><u class="uline">Account Settings</u></a>
+            <a href="#"><u class="uline">Shipping Addresses</u></a>
+            <a href="#"><u class="uline">Change Password</u></a>
+            <hr />
+            <br />
+            <p>&nbsp;&nbsp;Don't have an account?</p>
+            <p>&nbsp;&nbsp;No problem..</p>
+            <a href="#"><u>Create account</u></a>
+          </div>
+        </div>
         <p>
           <a href="#"
             ><i class="fa fa-heart"></i>&nbsp;<u class="uline">Favorites</u></a
@@ -47,7 +68,7 @@
       <!-- <div class="navbar_sticky">
         <div class="navbar">
           <div class="leftBox">
-            <nav>
+            <nav class="nav_bar">
               <ul class="nav_links">
                 <li>
                   <a href="https://www.aeo.in/" title="American Eagle">
@@ -98,7 +119,9 @@
                   </a>
                 </li>
                 <br />
-                <li><a href="#">Men</a></li>
+                <li>
+                  <a href="#">Men</a>
+                </li>
                 <li><a href="#">Women</a></li>
                 <li><a href="#">Jeans</a></li>
                 <li><a href="#">Clearance</a></li>
@@ -629,7 +652,7 @@
       </div>
     </div>
     <!-- go to top button at right end corner -->
-    <a class="gototop" href=""><i class="fa fa-arrow-up"></i></a>
+    <a class="gototop" href=""><i class="fa fa-angle-up"></i></a>
     <!-- Scroll to top -->
 
     <!-- Popup for signup page -->
