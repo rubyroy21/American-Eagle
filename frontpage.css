@@ -496,7 +496,6 @@ hr {
   top: 0;
   background-color: #fff;
 }
-
 .menubar {
   height: 60px;
   /* border: 1px solid red; */
@@ -534,7 +533,7 @@ hr {
   display: none;
   /* border: 1px solid red; */
 
-  min-width: 80%;
+  min-width: 75%;
   max-height: 280%;
   margin: auto;
   line-height: 15px;
