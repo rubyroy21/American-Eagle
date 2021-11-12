@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Buy T-shirts for Men Online | Men's T-shirts Online - American Eagle
+    </title>
+    <link rel="stylesheet" href="addtoCart.css">
+  </head>
+  <body>
+    <div class="divMain">
+      <div class="leftQuick"></div>
+      <div class="quick">
+        <h2>QUICK VIEW</h2>
+        <div class="border"></div>
+        <div id="disim"></div>
+  
+    
+
+      <!-- <img
+        class="imgix"
+        src="https://aeo.imgix.net/img/app/product/6/638930-6352317.jpg?w=305&auto=format"
+        alt=""
+      />
+      <p style="color: gray">American Eagle</p>
+      <p>₹ 5,999</p> -->
+      <form action="">
+        <label style="float: left"
+          ><a
+            class="href"
+            href="https://i.pinimg.com/originals/1a/66/c4/1a66c4b5a4f8ea8fbfc3a6722b40ac75.jpg"
+            >Size Chart</a
+          ></label
+        >
+        <br />
+        <br />
+        <select name="select" id="sel">
+          <option value="size">Size</option>
+          <option value="XS">XS</option>
+          <option value="S">S</option>
+          <option value="M">M</option>
+          <option value="L">L</option>
+          <option value="XL">XL</option>
+        </select>
+      </form>
+      <div class="counterr">
+        <button id="a1">-</button>
+        <h4 id="res" style="margin-left: 20px">0</h4>
+        <button id="a2">+</button>
+      </div>
+      <br />
+      <br />
+      <div class="buttons">
+        <button>Add To Bag</button>
+        <button id="favb">&#10084;</button>
+      </div>
+      <br />
+      <p style="text-align: left">
+        <a class="href" href="">View More Details</a>
+      </p>
+    </div>
+  </body>
+</html>
+<script>
+  var counter = localStorage.getItem("counterRes") || 0;
+  document.querySelector("#a2").addEventListener("click", incFunction);
+  document.querySelector("#a1").addEventListener("click", decFunction);
+  if (counter == null) {
+    alert("the counter is null");
+  }
+
+  function incFunction() {
+    console.log("here");
+    counter++;
+    localStorage.setItem("counterRes", counter);
+    document.getElementById("res").textContent = counter;
+  }
+  function decFunction() {
+    counter--;
+    localStorage.setItem("counterRes", counter);
+    document.getElementById("res").textContent = counter;
+  }
+  window.addEventListener("load", function () {
+    document.getElementById("res").textContent = counter;
+  });
+
+  var prod = JSON.parse(localStorage.getItem("cartI")) || [];
+  var maincon = document.getElementById("disim");
+  // displayItems(prod);
+  // function displayItems(product) {
+  //   product.map(item){
+  //   var div = document.createElement("div");
+  //   var h1 = document.createElement("h1");
+  //   h1.textContent = item.name;
+  //   var h2 = document.createElement("h2");
+  //   h2.textContent = item.price;
+  //   var img = document.createElement("img");
+  //   img.setAttribute("src", item.image_url);
+  //   div.append(h1, h2, img);
+  //   body.append(div);
+  // }
+  //   // console.log(item);
+
+  // }
+  displayItems(prod);
+
+  function displayItems(product) {
+    // document.querySelector("#disim").innerHTML = "";
+    product.map(function (item) {
+      var h1 = document.createElement("h1");
+      h1.textContent = item.name;
+      var h2 = document.createElement("h2");
+      h2.textContent = item.price;
+      // var h3 = document.createElement("h3");
+      // h3.textContent = item.type;
+
+      var img = document.createElement("img");
+      img.setAttribute("src", item.image_url);
+
+      // var butt = document.createElement("button");
+      // butt.textContent = "Add to Cart";
+      // butt.addEventListener("click", function () {
+      //   addToCart(item);
+      // });
+
+      var div = document.createElement("div");
+      div.append(h1, h2, img);
+      document.querySelector("#disim").append(div);
+    });
+  }
+</script>

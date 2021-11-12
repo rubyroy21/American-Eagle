@@ -32,7 +32,7 @@ body {
   margin-left: 7%;
   font-size: 13px;
 }
-.emailContent > input {
+.emailContent > .email {
   margin-top: 14%;
   margin-left: 110%;
   height: 40px;
@@ -60,7 +60,7 @@ body {
 /* Navigation CSS */
 
 .firstBar {
-  height: 30px;
+  height: 20px;
   width: 95%;
   display: flex;
   gap: 20px;
@@ -151,26 +151,27 @@ u:hover {
   width: 100%;
   height: 640px;
   /* border: 1px solid red; */
-  background: url(https://aeo.imgix.net/img/app/brands/ae/home/AE_D_P1_07102021.jpg?w=1519&auto=format);
+  background: url(https://aeo.imgix.net/img/app/brands/ae/home/AE_D_P1_12112021.jpg?w=1499&auto=format);
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   flex-direction: column;
 }
 .first_img > .btn1 {
-  margin-top: 24%;
-  margin-left: 65%;
+  margin-top: 30%;
+  margin-left: 40%;
+  display: flex;
+  flex-direction: column;
 }
 .first_img > .btn1 > button {
-  background-color: #f5d34d;
+  background-color: white;
   color: #4b5a6b;
-  font-size: 14px;
-  font-weight: bold;
+  font-size: 18px;
   border: none;
   height: 50px;
   width: 240px;
   border-radius: 28px 28px 28px 28px;
-  margin: 2%;
+  margin: 1%;
   cursor: pointer;
 }
 .sec_img {
@@ -447,7 +448,7 @@ a {
   margin-right: 20px;
 }
 hr {
-  width: 100%;
+  width: 96%;
 }
 .logo > img {
   width: 50px;
@@ -497,7 +498,7 @@ hr {
   background-color: #fff;
 }
 .menubar {
-  height: 60px;
+  height: 30px;
   /* border: 1px solid red; */
   /* background-color: pink; */
   text-align: left;
@@ -566,7 +567,8 @@ h5 {
   position: fixed;
   bottom: 0px;
   right: 0px;
-  z-index: 99;
+  margin: 0;
+  padding: 0;
   font-size: 18px;
   border: none;
   outline: none;
@@ -579,6 +581,192 @@ h5 {
   border-radius: 4px;
 }
 
-#myBtn i:hover {
-  background-color: #555;
+.dropbtn {
+  color: white;
+  padding: 0px;
+  font-size: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 8px 10px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.signinBtn {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+/* Modal Pop Up or Sign in and sign up */
+.modal-bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+.bg-active {
+  visibility: visible;
+  opacity: 1;
+}
+.modal {
+  position: relative;
+  background-color: white;
+  width: 40%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal .next {
+  padding: 10px 30px;
+  background-color: lightgray;
+  color: grey;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  align-items: center;
+}
+.modal input {
+  padding: 10px 30px;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.modal .next:hover {
+  background-color: black;
+  color: white;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.black {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.google {
+  padding: 10px 30px;
+  background-color: white;
+  color: black;
+  border: 1px solid gray;
+  cursor: pointer;
+  width: 40%;
+}
+.modal-bg1 {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s;
+}
+.bg-active1 {
+  visibility: visible;
+  opacity: 1;
+}
+.modal1 {
+  position: relative;
+  background-color: white;
+  width: 40%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal1 .next {
+  padding: 10px 30px;
+  background-color: lightgray;
+  color: grey;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  align-items: center;
+}
+.modal .signInn {
+  padding: 10px 30px;
+  background-color: lightgray;
+  color: grey;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  align-items: center;
+}
+.signInn:hover {
+  background-color: black;
+  color: white;
+}
+.modal1 input {
+  padding: 10px 30px;
+  width: 100%;
+  border: 1px solid gray;
+}
+
+.modal1 .next:hover {
+  background-color: black;
+  color: white;
+}
+.modal-close1 {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.black {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
+.google {
+  padding: 10px 30px;
+  background-color: white;
+  color: black;
+  border: 1px solid gray;
+  cursor: pointer;
+  width: 40%;
 }
