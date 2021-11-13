@@ -1,0 +1,119 @@
+.overview {
+  margin: auto;
+  width: 70%;
+  height: 700px;
+  /* border: 1px solid red; */
+  padding: 10px;
+}
+.a {
+  width: 7%;
+  /* border: 1px solid red; */
+  height: 100%;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+}
+.b {
+  width: 50%;
+  /* border: 1px solid red; */
+  height: 100%;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: top;
+}
+.c {
+  width: 35%;
+  /* border: 1px solid red; */
+  height: 100%;
+  display: inline-block;
+  margin-right: 20px;
+  text-align: center;
+}
+.a div {
+  width: 100%;
+  height: 12%;
+  /* border: 1px solid red; */
+  margin-bottom: 5px;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.o {
+  width: 50px;
+  border: 1px solid #342222;
+  height: 50px;
+  background-color: #342222;
+  border-radius: 30px;
+  margin: auto;
+}
+.href {
+  text-decoration-color: black;
+  color: black;
+}
+#sel {
+  width: 50%;
+  float: left;
+  padding: 15px;
+  color: gray;
+}
+.counterr {
+  display: flex;
+  float: right;
+  width: 20%;
+  border: 1px solid gray;
+  margin-left: -15%;
+  height: 48px;
+}
+#a1 {
+  float: left;
+}
+#a2 {
+  margin-left: 18px;
+}
+.buttons {
+  width: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin-top: 10%;
+  border: none;
+}
+.buttons button {
+  width: 60%;
+}
+.buttons input {
+  width: 60%;
+  background-color: #e8f0fe;
+  border: 1px solid gray;
+}
+#favb {
+  width: 25%;
+  background-color: white;
+  border: 1px solid black;
+}
+.bott {
+  width: 60%;
+  margin: auto;
+  padding: 10px;
+  display: flex;
+}
+
+.sm {
+  text-align: center;
+  font-size: 12px;
+}
+.heading1 {
+  height: 35px;
+  width: 100%;
+  display: flex;
+  gap: 5px;
+  font-size: 12px;
+  justify-content: center;
+  align-items: center;
+  background-color: #fafafa;
+}
+.heading1 > p {
+  color: black;
+}
