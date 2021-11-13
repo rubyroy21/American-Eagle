@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <title>T shirt page</title>
+      <script
+      src="https://kit.fontawesome.com/07381c3866.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+      <style>
+        .container {
+          display: grid;
+          grid-template-columns: 20% 20% 20% 20%;
+          grid-gap: 40px;
+          justify-content: center;
+          background-color: rgb(255, 255, 255);
+        }
+        .container > div {
+          /* width: ; */
+
+          /* border: 1px solid black; */
+          height: 400px;
+          text-align: center;
+        }
+        img {
+          width: 330px;
+          height: 360px;
+        }
+        .text {
+          font-size: 10px;
+        }
+        .btn {
+          border: 1px solid red;
+          font-size: 20px;
+          background-color: black;
+          color: white;
+          width: 10%;
+          padding: 10px;
+          text-align: center;
+          cursor: pointer;
+          margin-left: 45%;
+        }
+        .cont{
+                                                  
+          /* border: 1px solid red; */
+          height: auto;
+          display: inline-block;
+          display: grid;
+        
+        }
+        .sm {
+          text-align: center;
+          font-size: 12px;
+        }
+        .dull {
+          color: gray;
+        }
+        .txt{
+          margin: auto; 
+                
+        }
+         body {
+        font-family: "Lato", sans-serif;
+        
+      }
+
+      /* Fixed sidenav, full height */
+      .sidenav {
+        height: 100%;
+        width: 400px;
+        /* position: fixed; */
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: white;
+        overflow-x: hidden;
+        padding-top: 20px;
+        font-family: "Avenir Next Regular";
+        
+      }
+      
+
+      /* Style the sidenav links and the dropdown button */
+      .sidenav a,
+      .dropdown-btn {
+        padding: 6px 8px 6px 30px;
+        text-decoration: none;
+        font-size: 20px;
+        color: #000;
+        display: block;
+        border: none;
+        background: none;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        outline: none;
+       
+      }
+
+      /* On mouse-over */
+      .sidenav a:hover,
+      .dropdown-btn:hover {
+        color: #f1f1f1;
+        background-color: black;
+      }
+
+      /* Add an active class to the active dropdown button */
+      .active {
+        color: black;
+      }
+
+      /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+      .dropdown-container {
+        display: none;
+        background-color: white;
+        padding-left: 8px;
+      }
+
+      /* Optional: Style the caret down icon */
+      .fa-plus {
+        float: right;
+        padding-right: 8px;
+      }
+
+      /* Some media queries for responsiveness */
+
+      .clrImg {
+        border-radius: 50%;
+        width: 18px;
+        height: 18px;
+      }
+      .dropdown-btn a {
+        font-size: 12px;
+        font-weight: 400;
+      }
+      /* .head {
+        margin: 22px 0 16px 20px;
+        font-size: 19px;
+        text-transform: uppercase;
+      
+      } */
+      .head .filteritems__count {
+        display: block;
+        color: #888;
+        line-height: 1.5;
+        text-decoration: none;
+        padding: 0 6 px 0 0;
+        font-size: 13px;
+        font-style: italic;
+        margin-bottom: 12 px;
+      }
+      .dropdown-btn:hover{
+          background-color: white;
+          color: black;
+      }
+      hr{
+          margin-left: 20px;
+      }
+      span{
+          padding-right: 20px;
+      }
+    
+      img:hover{
+          border: 1px solid white;
+          /* border-radius: 50%; */
+      }
+
+      #btn1{
+        position: absolute;
+        margin-right: 10px;
+        margin-top: 285px;
+        margin-left: -90px;
+        /* transform: translate(-100%, 150%);
+        -ms-transform: translate(-50%, -50%); */
+        background-color: white;
+        color: black;
+        font-size: 30px;
+        padding: 12px 24px;
+        font-weight: bolder;
+        border: none;
+        cursor: pointer;
+        border-radius: 1000%;
+        text-align: center;
+        }
+
+        #btn1:hover{
+        cursor: default;
+        transform: rotate(180deg);
+        transition: all 1s ease-in-out 0s; 
+        }
+
+        .btn2{
+        position: absolute;
+        margin-top: auto;
+        margin-left: auto;
+        /* top: 58%;
+        left: 67.5%; */
+        /* transform: translate(-100%, 150%);
+        -ms-transform: translate(-50%, -50%); */
+        background-color: white;
+        color: black;
+        font-size: 16px;
+        padding: 12px 24px;
+        border: none;
+        cursor: pointer;
+        border-radius: 1000%;
+        text-align: center;
+        }
+
+        .btn2:hover{
+        cursor: default;
+        transform: rotate(180deg);
+        transition: all 1s ease-in-out 0s; 
+        }
+
+        #sel {
+        /* margin-left: 1100px; */
+        width: 100%;
+        /* justify-content: flex-end; */
+        padding: 15px;
+        color: gray;
+      }
+
+
+      .maindiv{
+        display: flex;
+        flex-wrap: nowrap;
+        vertical-align: top;
+      }
+
+      #table{
+          display: flex;
+          flex-wrap: nowrap;
+          justify-content: space-between;
+          border: 1px solid red;
+          margin-top: 30px;
+      }
+      #tshirt{
+          margin-left: -600px;
+          padding-top: 30px;
+      }
+      #table2{
+          display: flex;
+          flex-direction: row;
+          /* justify-content: space-between; */
+          border: 1px solid teal;
+          margin-top: 30px;
+          height: auto
+         ;
+      }
+      .itemsList{
+          display: grid;
+          grid-template-columns: auto auto auto;
+          width: 70%;
+          margin-left: 40px;
+          border: 1px solid yellowgreen;
+          max-height: 1000px;
+      }
+      #contOfP{
+          display: grid;
+          grid-template-columns: auto auto auto;
+          grid-gap: 4%;
+      }
+
+      #para{
+        text-align: center;
+      }
+      </style>
+</head>
+<body>
+    <div class="sm">
+        Home &nbsp; &nbsp;/ &nbsp; &nbsp;Men&nbsp; &nbsp; / &nbsp;
+        &nbsp;Tops&nbsp; &nbsp; / &nbsp; &nbsp;
+        <span class="dull">t-shirts</span>
+      </div>
+    <div id="table">
+        <div class="head">
+            FILTER <span class="filteritems__count">1588 items</span>
+          </div>
+          <div id="tshirt">
+            T-SHIRTS FOR MEN
+          </div>
+        <div>
+            <select name="select" id="sel" onchange="pricesort()">
+            <option value="">Sort By<br> New Arrivals </div></option>
+            <option value="low">Price:Lowest First</option>
+            <option value="high">Price:Highest First</option>
+            <option value="M">Price:Lowest First</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+            </select>
+      </div>
+    </div>
+    <div id="table2">
+       <div>
+        <div class="sidenav">
+            <div class="head">
+              FILTER <span class="filteritems__count">1588 items</span>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Gender
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Men</a>
+              <a href="#">Women</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Category
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Belts</a>
+              <a href="#">Bottoms</a>
+              <a href="#">Boxers</a>
+              <a href="#">Graphic Tees</a>
+              <a href="#">Hoodies</a>
+              <a href="#">Jackets</a>
+              <a href="#">Jeans</a>
+              <a href="#">Joggers</a>
+              <a href="#">Mask</a>
+              <a href="#">Polo Shirt</a>
+              <a href="#">Shirts</a>
+              <a href="#">Shoes</a>
+              <a href="#">Socks</a>
+              <a href="#">Sweaters</a>
+              <a href="#">T-Shirts</a>
+              <a href="#">Tops</a>
+              <a href="#">UnderWear</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Product Type
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">1 Polo Shirt</a>
+              <a href="#">3 Pack Short</a>
+              <a href="#">3 Pack Socks</a>
+              <a href="#">5 Pack Masks</a>
+              <a href="#">5 Pack socks</a>
+              <a href="#">Athletic fit jeans</a>
+              <a href="#">Belts</a>
+              <a href="#">Bomber Jackets</a>
+              <a href="#">Bootcut Jeans</a>
+              <a href="#">Boxer Breifs</a>
+              <a href="#">Boxer Shots</a>
+              <a href="#">Boxers</a>
+              <a href="#">Briefs</a>
+              <a href="#">Button Down Shirt</a>
+              <a href="#">Button Up Shirts</a>
+              <a href="#">Chinos</a>
+              <a href="#">Crew Beck T-Shirts</a>
+              <a href="#">Denim Jacket</a>
+              <a href="#">Denim Jpggers</a>
+              <a href="#">Flannel Shirts</a>
+              <a href="#">Denim Shorts</a>
+              <a href="#">Fleece Joggers</a>
+              <a href="#">Flip Flops</a>
+              <a href="#">Henley T-shirts</a>
+              <a href="#">Hooded Shirts</a>
+              <a href="#">Khacki Shorts</a>
+              <a href="#">Crew Beck T-Shirts</a>
+              <a href="#">Graphic Tees</a>
+              <a href="#">Hoodies</a>
+              <a href="#">Jackets</a>
+              <a href="#">Jeans</a>
+              <a href="#">Joggers</a>
+              <a href="#">Mask</a>
+              <a href="#">Polo Shirt</a>
+              <a href="#">Shirts</a>
+              <a href="#">Shoes</a>
+              <a href="#">Socks</a>
+              <a href="#">Sweaters</a>
+              <a href="#">T-Shirts</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Fit
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Adjustable Fit</a>
+              <a href="#">Athletic</a>
+              <a href="#">Classic Fit</a>
+              <a href="#">Loose Fit</a>
+              <a href="#">Original Bootcut</a>
+              <a href="#">Original Straight</a>
+              <a href="#">Relaxed Fit</a>
+              <a href="#">Skinny</a>
+              <a href="#">Skinny Fit</a>
+              <a href="#">Slim</a>
+              <a href="#">Slim Fit</a>
+              <a href="#">Slim Straight</a>
+              <a href="#">Standard Fit</a>
+              <a href="#">Super Skinny</a>
+              <a href="#">Ultra Skinny</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Sizes
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">XS</a>
+              <a href="#">S</a>
+              <a href="#">M</a>
+              <a href="#">L</a>
+              <a href="#">XXL</a>
+              <a href="#">XL</a>
+              <a href="#">7</a>
+              <a href="#">8</a>
+              <a href="#">26</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Color
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/others/img1x1.png"
+                    class="clrImg"
+                /></span>
+                Beige</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/black.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                black</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/blue.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Blue</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/brown.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Brown</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/burgundy.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Burgundy</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/cream.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Cream</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/green.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Green</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/grey.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Grey</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/khaki.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Khaki</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/maroon.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Maroon</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/others/img1x1.png"
+                    class="clrImg"
+                /></span>
+                Multi</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/multi-colored.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Multi-Colored</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/navy.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Navy</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/olive.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Olive</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/orange.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Orange</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/peach.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Peach</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/pink.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Pink</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/purple.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Purple</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/red.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Red</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/white.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                white</a
+              >
+              <a href="#"
+                ><span
+                  ><img
+                    src="https://aeo.imgix.net/img/app/brands/ae/colorswatch/yellow.png?w=18&auto=format"
+                    class="clrImg"
+                /></span>
+                Yellow</a
+              >
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Price
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">399 AND BELOW</a>
+              <a href="#">400 TO 599</a>
+              <a href="#">600 TO 999</a>
+              <a href="#">1000 TO 1499</a>
+              <a href="#">1500 TO 2999</a>
+              <a href="#">3000 TO 4499</a>
+              <a href="#">4500 To 6999</a>
+              <a href="#">7500 TO 8999</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Discount
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">25% and Above</a>
+              <a href="#">30% and Above</a>
+              <a href="#">40% and Above</a>
+              <a href="#">50% and Above</a>
+              <a href="#">60% and Above</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Wash
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Black</a>
+              <a href="#">Color wash</a>
+              <a href="#">Dark wash</a>
+              <a href="#">Light wash</a>
+              <a href="#">Medium wash</a>
+              <a href="#">white</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Pattern
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">1|Checks</a>
+              <a href="#">1|Checks|Elastic</a>
+              <a href="#">1|Checks|Elastic|Flat front</a>
+              <a href="#">1|Colorblock</a>
+              <a href="#">1|Elastic|Flat front</a>
+              <a href="#">1|Elastic|Flat front|Print-Tropical</a>
+              <a href="#">Checks</a>
+              <a href="#">Checks|Elastic</a>
+              <a href="#">Checks|Elastic|Flat front</a>
+              <a href="#">Colorblock</a>
+              <a href="#">Elastic|Flat front|Print-Tropical</a>
+              <a href="#">Floral</a>
+              <a href="#">Printed</a>
+              <a href="#">solid</a>
+              <a href="#">Stripes</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Sleeves
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">1|Long sleeve</a>
+              <a href="#">1|Short sleeve</a>
+              <a href="#">Half sleeves</a>
+              <a href="#">Long Sleeve</a>
+              <a href="#">Short Sleeve</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Neck
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Band</a>
+              <a href="#">Collor</a>
+              <a href="#">Crew Neck</a>
+              <a href="#">Mock Neck</a>
+              <a href="#">Round Neck</a>
+              <a href="#">V-Neck</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Stretch
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">1|Ne(x)T Level</a>
+              <a href="#">1|Ne(x)T Level</a>
+              <a href="#">AirFlex+</a>
+              <a href="#">Flex</a>
+              <a href="#">Ne(x)T Level</a>
+              <a href="#">No stretch</a>
+              <a href="#">Slight stretch</a>
+            </div>
+            <hr />
+            <button class="dropdown-btn">
+              Destruction
+              <i class="fas fa-plus"></i>
+            </button>
+            <div class="dropdown-container">
+              <a href="#">Clean</a>
+              <a href="#">Ripped</a>
+            </div>
+            <hr />
+          </div>
+       </div>
+          <div id="dis" class="itemsList"> </div>
+    </div>
+</body>
+</html>
+
+<script src="shirt.js"></script>
