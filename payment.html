@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        width: 350px;
+        height: 500px;
+        margin: auto;
+        margin-top: 30px
+      }
+      .boxer{
+          border: 1px solid black;
+          padding: 20px;
+          
+
+      }
+      hr{
+          width: 300px;
+          margin-left: 0;
+      }
+    </style>
+  </head>
+  <body>
+<div class="boxer">
+    <h1>*Payment Checkout*</h1>
+    <label for="">Card Holder Name:</label>
+    <input type="text" placeholder="card holder name" />
+    <br />
+    <hr />
+    <label for="">Card Number:</label>
+
+    <input type="number" placeholder="Card Number" />
+    <br />
+    <hr />
+    <label for="">Enter CVV:</label>
+
+    <input type="number" placeholder="enter CVV" />
+    <br />
+    <hr />
+    <label for="">Enter OTP:</label>
+
+    <input type="number" placeholder="Enter OTP" />
+    <br />
+    <hr />
+    <br>
+    <button>Place Order</button>
+  </body>
+</div>
+</html>
+<script>
+  document.querySelector("button").addEventListener("click", payment);
+
+  function payment() {
+    alert("Order is Placed");
+  }
+</script>

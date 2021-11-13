@@ -54,7 +54,7 @@
       <br />
       <br />
       <div class="buttons">
-        <button>Add To Bag</button>
+        <button id="addBag">Add To Bag</button>
         <button id="favb">&#10084;</button>
       </div>
       <br />
@@ -106,7 +106,7 @@
 
   // }
   displayItems(prod);
-
+  var cartItems = JSON.parse(localStorage.getItem("cartData")) || [];
   function displayItems(product) {
     // document.querySelector("#disim").innerHTML = "";
     product.map(function (item) {
@@ -125,10 +125,21 @@
       // butt.addEventListener("click", function () {
       //   addToCart(item);
       // });
-
+       var btn = document.getElementById("addBag")
+       btn.addEventListener("click", function(){
+        addToCart(item);
+       })
       var div = document.createElement("div");
       div.append(h1, h2, img);
       document.querySelector("#disim").append(div);
     });
+
+    function addToCart(item){
+            //  console.log(item);
+          
+       cartItems.push(item);
+           localStorage.setItem("cartData", JSON.stringify(cartItems));
+
+    }
   }
 </script>
