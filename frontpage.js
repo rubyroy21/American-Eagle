@@ -119,3 +119,9 @@ var totalPrice = cartList.reduce(function (acc, cv) {
 console.log(totalPrice);
 var tot = document.getElementById("totalP")
 tot.textContent = totalPrice;
+
+document.querySelector("button").addEventListener("click", payment);
+
+function payment() {
+    alert("Order is Placed");
+}
