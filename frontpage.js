@@ -65,3 +65,63 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
+
+console.log("here")
+var cartList = JSON.parse(localStorage.getItem("cartData"));
+console.log(cartList);
+var cartDiv = document.createElement("div");
+cartDiv.setAttribute("id", "cartContainer");
+
+
+
+var itemDiv = document.querySelector("#cartProducts");
+itemDiv.append(cartDiv)
+
+showProduct(cartList);
+
+function showProduct(cartList) {
+    console.log("here")
+    cartList.map(function (item) {
+        //   console.log(item);
+        var imgD = document.createElement("div");
+        imgD.setAttribute("id", "ImagesD")
+
+        var contents = document.createElement("div");
+        contents.setAttribute("id", "contDiv")
+        var img = document.createElement("img");
+        img.setAttribute("src", item.image1_url);
+        img.setAttribute("id", "icons")
+        var h2 = document.createElement("h2");
+        h2.textContent = item.name;
+
+        var h3 = document.createElement("h3");
+        h3.textContent = item.price;
+        var p1 = document.createElement("p");
+        p1.textContent = "Color: Black";
+
+        var p2 = document.createElement("p");
+        p2.textContent = "Size: M";
+        var p3 = document.createElement("p");
+        p3.textContent = "Qty: 1";
+
+        var pDiv = document.createElement("div");
+        pDiv.setAttribute("id", "pTags")
+        pDiv.innerHTML = "<p>Edit   | <span>Remove</span></p>";
+        imgD.append(img);
+        contents.append(h2, h3, p1, p2, p3, pDiv);
+        cartDiv.append(imgD, contents);
+    });
+}
+var totalPrice = cartList.reduce(function (acc, cv) {
+    return acc + Number(cv.price);
+}, 0);
+
+console.log(totalPrice);
+var tot = document.getElementById("totalP")
+tot.textContent = totalPrice;
+
+document.querySelector("button").addEventListener("click", payment);
+
+function payment() {
+    alert("Order is Placed");
+}

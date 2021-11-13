@@ -4,16 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
     <title>Document</title>
     <link rel="stylesheet" href="checkout.css" />
     <link rel="stylesheet" href="frontpage.css" />
+    <style>
+      .boxer{
+          border: 1px solid black;
+          padding: 20px;
+          height: 300px;
+          width: 30%;
+          margin: auto;
+      }
+      hr{
+          width: 300px;
+          margin-left: 0;
+      }
+    </style>
   </head>
   <body>
-    <div class="firstBar">
+  <div class="firstBar">
       <p>
         <a href="#"><u class="uline">E-Gift Card</u></a>
       </p>
@@ -408,43 +417,37 @@
         </p>
       </div>
     </div>
-    <div class="head">
-      <h4><a href="">AMERICAN EAGLE</a></h4>
-      <p>
-        <a href=""><i class="fa fa-envelope"></i>happytohelp@aeo.in</a>
-      </p>
-    </div>
-    <div class="body">
-      <div class="div1">
-        1. YOUR CART ITEM (S) <a class="edit" href="#">Edit</a>
-        <div id="cartProducts"></div>
-      </div>
-      <div class="div2">
-        <h2>Order Summary</h2>
-        <p>Order Value</p>
-        <p>Shipping</p>
-        <div class="line"></div>
-        <h3>Order Total <span id="totalP"></span></h3>
-        <div class="off">
-          % Check for Offers <a class="edit1" href="">APPLY NOW</a>
-        </div>
-        <p class="p1">
-          Safe and Secure Payments. Easy returns. 100% Authentic products
-        </p>
-      </div>
-      <div class="div3">
-        2. ACCOUNT DETAILS <a class="edit" href="#">Edit</a>
-      </div>
-      <div class="div4">
-        3. SHIPPING DETAILS
-        <div class="deco">
-          <div></div>
-          <input class="inp" type="number" placeholder="Enter Pincode" />
-          <button class="btn0">CHECK</button>
-        </div>
-      </div>
-      <div class="div5"><a href="payment.html">4. PAYMENT OPTIONS</a></div>
-    </div>
+    <br><br>
+    <br>
+<div class="boxer">
+    <h1>*Payment Checkout*</h1>
+    <label for="">Card Holder Name:</label>
+    <input type="text" placeholder="card holder name" />
+    <br />
+    <br />
+    <hr />
+    <label for="">Card Number:</label>
+
+    <input type="number" placeholder="Card Number" />
+    <br />
+    <br />
+    <hr />
+    <label for="">Enter CVV:</label>
+
+    <input type="number" placeholder="enter CVV" />
+    <br />
+    <br />
+    <hr />
+    <label for="">Enter OTP:</label>
+
+    <input type="number" placeholder="Enter OTP" />
+
+    <br />
+    <br />
+    <hr />
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button class="payOrder">Place Order</button>
+  </div>
     <!-- Footer -->
     <br />
 
@@ -533,6 +536,15 @@
   </div>
   <!-- go to top button at right end corner -->
   <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-angle-up"></i></button>
+
+
   </body>
 </html>
-<script src="frontpage.js"></script>
+<script>
+  document.querySelector(".payOrder").addEventListener("click", payment);
+
+function payment() {
+    alert("Order is Placed");
+    window.location.href="homepage1.html"
+}
+</script>
