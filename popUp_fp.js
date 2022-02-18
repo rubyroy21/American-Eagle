@@ -53,7 +53,7 @@ function signUp() {
     userArr.push(userProfile);
     localStorage.setItem("userData", JSON.stringify(userArr));
 
-    window.location.href = "homepage1.html";
+    window.location.href = "index.html";
 }
 
 document.querySelector(".signInn").addEventListener("click", signIn);
@@ -67,14 +67,14 @@ function signIn() {
     for (var i = 0; i < regdUsers.length; i++) {
         if (regdUsers[i].emailAddress == email && regdUsers[i].password == pass) {
             alert("Login Successfully!");
-            window.location.href = "homepage1.html";
+            window.location.href = "index.html";
             return true;
         }
     }
     for (var j = 0; j < regdUsers.length; j++) {
         if (regdUsers[j].emailAddress != email && regdUsers[j].password != pass) {
             alert("Invalid User Credentials!");
-            window.location.href = "homepage1.html";
+            window.location.href = "index.html";
             return true;
         }
     }
